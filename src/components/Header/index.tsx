@@ -7,7 +7,9 @@ export function Header() {
   return (
     <HeaderContainer>
       <nav>
-        <img src={logoBrand} />
+        <NavLink to='/'>
+          <img src={logoBrand} />
+        </NavLink>
 
         <div>
           <City>

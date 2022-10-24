@@ -1,10 +1,13 @@
 import { ShoppingCart } from "phosphor-react";
+import { CoffeeCard } from "./components/CoffeeCard";
 import coffeeImage from '../../assets/coffeeImage.svg'
+
 import {
   IntroContainer,
   IntroDescriptionContainer,
   TitleContainer,
-  InfoIntroItems
+  InfoIntroItems,
+  CoffeeList,
 } from "./style"
 
 export function Home() {
@@ -42,6 +45,15 @@ export function Home() {
 
       <section>
         <h2>Nossos cafés</h2>
+
+        <CoffeeList>
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+        </CoffeeList>
       </section>
     </div>
   )

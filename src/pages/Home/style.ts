@@ -45,3 +45,10 @@ export const InfoIntroItems = styled.div`
     gap: 1rem;
   }
 `
+
+export const CoffeeList = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+`;
