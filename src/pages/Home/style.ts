@@ -38,12 +38,6 @@ export const InfoIntroItems = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
-
-  div {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
 `
 
 export const CoffeeList = styled.div`

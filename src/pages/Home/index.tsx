@@ -1,4 +1,4 @@
-import { ShoppingCart } from "phosphor-react";
+import { InfoIcon } from "../../components/InfoIcon";
 import { CoffeeCard } from "./components/CoffeeCard";
 import coffeeImage from '../../assets/coffeeImage.svg'
 
@@ -21,22 +21,7 @@ export function Home() {
           </TitleContainer>
 
           <InfoIntroItems>
-            <div>
-              <ShoppingCart size={22} weight='fill'/>
-              <p>Compra simples e segura</p>
-            </div>
-            <div>
-              <ShoppingCart size={22} weight='fill' />
-              <p>Compra simples e segura</p>
-            </div>
-            <div>
-              <ShoppingCart size={22} weight='fill' />
-              <p>Compra simples e segura</p>
-            </div>
-            <div>
-              <ShoppingCart size={22} weight='fill' />
-              <p>Compra simples e segura</p>
-            </div>
+            <InfoIcon backgroundColor="gray"/>
           </InfoIntroItems>
         </IntroDescriptionContainer>
 
