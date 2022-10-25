@@ -1,5 +1,4 @@
 import { ShoppingCart } from "phosphor-react";
-import coffee from '../../../../assets/coffee.svg'
 import {
   CoffeeCardContainer,
   HeaderCardContainer,
@@ -8,24 +7,36 @@ import {
   PriceFooter,
   AmountAndCart,
   AmountButtonContainer,
-  LessButton,
-  PlusButton
 } from "./styles";
 
-export function CoffeeCard() {
+interface CoffeesProps {
+  id: number
+  tags: string[]
+  name: string
+  description: string
+  photo: string
+  price: number
+}
+
+interface CoffeeCardProps {
+  coffee: CoffeesProps
+}
+
+export function CoffeeCard({ coffee }: CoffeeCardProps) {
   return (
     <CoffeeCardContainer>
       <HeaderCardContainer>
-        <img src={coffee} />
+        <img src={`../../../../assets/coffeesImages/${coffee.photo}`} />
         <Tags>
-          <span>tradicional</span>
-          <span>tradicional</span>
+          {coffee.tags.map((tags) => (
+            <span key={coffee.id}>{tags}</span>
+          ))}
         </Tags>
       </HeaderCardContainer>
 
       <Title>
-        <h2>Expresso Tradicional</h2>
-        <p>O tradicional café feito com água quente e grãos moídos</p>
+        <h2>{coffee.name}</h2>
+        <p>{coffee.description}</p>
       </Title>
 
       <PriceFooter>
@@ -35,11 +46,6 @@ export function CoffeeCard() {
         </div>
 
         <AmountAndCart>
-          <AmountButtonContainer>
-            <LessButton>-</LessButton>
-            <span>1</span>
-            <PlusButton>+</PlusButton>
-          </AmountButtonContainer>
 
           <button>
             <ShoppingCart size={22} weight='fill' />

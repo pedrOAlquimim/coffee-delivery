@@ -1,7 +1,8 @@
-import { InfoIcon } from "../../components/InfoIcon";
-import { CoffeeCard } from "./components/CoffeeCard";
+import { InfoIcon } from "../../components/InfoIcon"
+import { CoffeeCard } from "./components/CoffeeCard"
+import { coffees } from "../../data/coffees"
+import { ShoppingCart, Package, Timer, Coffee } from "phosphor-react"
 import coffeeImage from '../../assets/coffeeImage.svg'
-import { ShoppingCart, Package, Timer, Coffee } from "phosphor-react";
 import {
   IntroContainer,
   IntroDescriptionContainer,
@@ -51,12 +52,9 @@ export function Home() {
         <h2>Nossos cafés</h2>
 
         <CoffeeList>
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
+          {coffees.map((coffee) => (
+            <CoffeeCard key={coffee.id} coffee={coffee} />
+          ))}
         </CoffeeList>
       </section>
     </div>

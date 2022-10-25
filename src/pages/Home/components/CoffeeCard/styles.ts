@@ -34,7 +34,7 @@ export const Tags = styled.div`
   align-items: center;
   gap: 0.25rem;
   margin-top: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 
   span {
     font-size: 0.625rem;
@@ -101,24 +101,4 @@ export const AmountButtonContainer = styled.div`
   gap: 0.25rem;
 
   background: ${(props) => props.theme['base-button']};
-`
-
-const AmountButtons = styled.button`
-  font-size: 1.25rem;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-
-  color: ${(props) => props.theme.purple};
-`
-
-export const LessButton = styled(AmountButtons)`
-  padding-left: 0.5rem;
-  padding-right: 0.25rem;
-  font-size: 1.25rem;
-`
-export const PlusButton = styled(AmountButtons)`
-  padding-left: 0.25rem;
-  padding-right: 0.5rem;
-  font-size: 1.25rem;
 `
