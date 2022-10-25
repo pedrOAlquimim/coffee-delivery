@@ -16,11 +16,15 @@ interface InfoIconStylesProps {
 export const InfoIconContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 `
 
 export const Icon = styled.div<InfoIconStylesProps>`
-  ${props => {
-    return `background-color: ${backgroundColorType[props.backgroundColor]}`
-  }}
+  line-height: 0;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+
+  color: ${(props) => props.theme.background};
+  background: ${(props) => props.theme[backgroundColorType[props.backgroundColor]]};
 `

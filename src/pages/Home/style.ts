@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import introBackground from '../../assets/Background.png'
 
 export const IntroContainer = styled.section`
   display: flex;
@@ -35,9 +36,10 @@ export const TitleContainer = styled.div`
 `
 
 export const InfoIntroItems = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.25rem;
 `
 
 export const CoffeeList = styled.div`

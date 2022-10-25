@@ -1,4 +1,3 @@
-import { ShoppingCart } from "phosphor-react";
 import { ReactNode } from "react"
 import {
   BackgroundColorType,
@@ -7,17 +6,18 @@ import {
 } from './styles'
 
 interface InfoIconProps {
-  children?: ReactNode;
+  icon: ReactNode
+  text: string | ReactNode
   backgroundColor: BackgroundColorType
 }
 
-export function InfoIcon({ children, backgroundColor}: InfoIconProps) {
+export function InfoIcon({ icon, text, backgroundColor}: InfoIconProps) {
   return (
     <InfoIconContainer>
       <Icon backgroundColor={backgroundColor}>
-        <ShoppingCart size={16} />
+        {icon}
       </Icon>
-      <p>Compra simples e segura</p>
+      <p>{text}</p>
     </InfoIconContainer>
   )
 }
