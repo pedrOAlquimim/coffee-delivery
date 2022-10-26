@@ -74,6 +74,16 @@ export const PriceFooter = styled.footer`
   align-items: center;
   justify-content: space-between;
 `
+export const RegularText = styled.span`
+  font-size: 0.875rem;
+`
+
+export const Price = styled.span`
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-left: 0.188rem;
+`
 
 export const AmountAndCart = styled.div`
   display: flex;

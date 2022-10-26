@@ -1,10 +1,13 @@
 import { ShoppingCart } from "phosphor-react";
+import { formatMoney } from "../../../../uses/formatPrice";
 import {
   CoffeeCardContainer,
   HeaderCardContainer,
   Tags,
   Title,
   PriceFooter,
+  RegularText,
+  Price,
   AmountAndCart,
   AmountButtonContainer,
 } from "./styles";
@@ -23,10 +26,12 @@ interface CoffeeCardProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
+  const formattedPrice = formatMoney(coffee.price)
+
   return (
     <CoffeeCardContainer>
       <HeaderCardContainer>
-        <img src={`../../../../assets/coffeesImages/${coffee.photo}`} />
+        <img src={`/src/assets/coffeesImages/${coffee.photo}`} />
         <Tags>
           {coffee.tags.map((tags) => (
             <span key={coffee.id}>{tags}</span>
@@ -41,8 +46,8 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
 
       <PriceFooter>
         <div>
-          <span>R$</span>
-          <span>9,90</span>
+          <RegularText>R$</RegularText>
+          <Price>{formattedPrice}</Price>
         </div>
 
         <AmountAndCart>
