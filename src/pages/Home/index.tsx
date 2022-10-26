@@ -1,7 +1,7 @@
-import { InfoIcon } from "../../components/InfoIcon"
-import { CoffeeCard } from "./components/CoffeeCard"
-import { coffees } from "../../data/coffees"
-import { ShoppingCart, Package, Timer, Coffee } from "phosphor-react"
+import { InfoIcon } from '../../components/InfoIcon'
+import { CoffeeCard } from './components/CoffeeCard'
+import { coffees } from '../../data/coffees'
+import { ShoppingCart, Package, Timer, Coffee } from 'phosphor-react'
 import coffeeImage from '../../assets/coffeeImage.svg'
 import {
   IntroContainer,
@@ -9,7 +9,7 @@ import {
   TitleContainer,
   InfoIntroItems,
   CoffeeList,
-} from "./style"
+} from './style'
 
 export function Home() {
   return (
@@ -18,7 +18,10 @@ export function Home() {
         <IntroDescriptionContainer>
           <TitleContainer>
             <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-            <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
+            <p>
+              Com o Coffee Delivery você recebe seu café onde estiver, a
+              qualquer hora
+            </p>
           </TitleContainer>
 
           <InfoIntroItems>

@@ -1,5 +1,4 @@
-import styled from "styled-components"
-import introBackground from '../../assets/Background.png'
+import styled from 'styled-components'
 
 export const IntroContainer = styled.section`
   display: flex;
@@ -47,4 +46,4 @@ export const CoffeeList = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-`;
+`

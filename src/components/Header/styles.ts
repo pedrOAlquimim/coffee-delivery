@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
   padding-top: 2.0625rem;
@@ -20,8 +20,8 @@ export const HeaderContainer = styled.header`
         padding: 0.5rem;
         border-radius: 6px;
 
-        color: ${(props) => props.theme["yellow-dark"]};
-        background: ${(props) => props.theme["yellow-light"]};
+        color: ${(props) => props.theme['yellow-dark']};
+        background: ${(props) => props.theme['yellow-light']};
       }
     }
   }
@@ -36,5 +36,5 @@ export const City = styled.div`
   font-size: 0.875rem;
 
   color: ${(props) => props.theme['purple-dark']};
-  background:  ${(props) => props.theme['purple-light']};
+  background: ${(props) => props.theme['purple-light']};
 `

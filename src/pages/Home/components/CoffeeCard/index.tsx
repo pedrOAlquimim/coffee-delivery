@@ -1,5 +1,5 @@
-import { ShoppingCart } from "phosphor-react";
-import { formatMoney } from "../../../../uses/formatPrice";
+import { ShoppingCart } from 'phosphor-react'
+import { formatMoney } from '../../../../uses/formatPrice'
 import {
   CoffeeCardContainer,
   HeaderCardContainer,
@@ -9,8 +9,7 @@ import {
   RegularText,
   Price,
   AmountAndCart,
-  AmountButtonContainer,
-} from "./styles";
+} from './styles'
 
 interface CoffeesProps {
   id: number
@@ -51,9 +50,8 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
         </div>
 
         <AmountAndCart>
-
           <button>
-            <ShoppingCart size={22} weight='fill' />
+            <ShoppingCart size={22} weight="fill" />
           </button>
         </AmountAndCart>
       </PriceFooter>

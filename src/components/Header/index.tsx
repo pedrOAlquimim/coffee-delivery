@@ -7,18 +7,18 @@ export function Header() {
   return (
     <HeaderContainer>
       <nav>
-        <NavLink to='/'>
+        <NavLink to="/">
           <img src={logoBrand} />
         </NavLink>
 
         <div>
           <City>
-            <MapPin size={22} weight='fill' />
+            <MapPin size={22} weight="fill" />
             <p>São Paulo, SP</p>
           </City>
 
-          <NavLink to='/checkout'>
-            <ShoppingCart size={22} weight='fill' />
+          <NavLink to="/checkout">
+            <ShoppingCart size={22} weight="fill" />
           </NavLink>
         </div>
       </nav>

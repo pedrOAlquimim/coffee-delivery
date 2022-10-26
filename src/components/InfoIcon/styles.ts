@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export type BackgroundColorType = 'yellow' | 'orange' | 'gray' | 'purple'
 
@@ -6,7 +6,7 @@ const backgroundColorType = {
   yellow: 'yellow',
   orange: 'yellow-dark',
   gray: 'base-text',
-  purple: 'purple'
+  purple: 'purple',
 } as const
 
 interface InfoIconStylesProps {
@@ -26,5 +26,6 @@ export const Icon = styled.div<InfoIconStylesProps>`
   font-size: 1rem;
 
   color: ${(props) => props.theme.background};
-  background: ${(props) => props.theme[backgroundColorType[props.backgroundColor]]};
+  background: ${(props) =>
+    props.theme[backgroundColorType[props.backgroundColor]]};
 `

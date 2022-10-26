@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const CoffeeCardContainer = styled.div`
   max-width: 16rem;
@@ -10,7 +10,7 @@ export const CoffeeCardContainer = styled.div`
   border-radius: 6px 36px 6px 36px;
   padding: 1.25rem;
   padding-top: 0;
-  
+
   background: ${(props) => props.theme['base-card']};
 `
 
@@ -44,8 +44,8 @@ export const Tags = styled.div`
     line-height: 130%;
     padding: 0.25rem 0.5rem;
 
-    color: ${(props) => props.theme["yellow-dark"]};
-    background: ${(props) => props.theme["yellow-light"]};
+    color: ${(props) => props.theme['yellow-dark']};
+    background: ${(props) => props.theme['yellow-light']};
   }
 `
 
