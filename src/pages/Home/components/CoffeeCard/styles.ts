@@ -10,6 +10,7 @@ export const CoffeeCardContainer = styled.div`
   border-radius: 6px 36px 6px 36px;
   padding: 1.25rem;
   padding-top: 0;
+  margin-top: 0.5rem;
 
   background: ${(props) => props.theme['base-card']};
 `
@@ -74,6 +75,7 @@ export const PriceFooter = styled.footer`
   align-items: center;
   justify-content: space-between;
   gap: 1.438rem;
+  padding-top: 2.063rem;
 `
 
 export const RegularText = styled.span`

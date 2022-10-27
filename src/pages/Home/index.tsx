@@ -4,16 +4,18 @@ import { coffees } from '../../data/coffees'
 import { ShoppingCart, Package, Timer, Coffee } from 'phosphor-react'
 import coffeeImage from '../../assets/coffeeImage.svg'
 import {
+  HomeContainer,
   IntroContainer,
   IntroDescriptionContainer,
   TitleContainer,
   InfoIntroItems,
+  CoffeeTitle,
   CoffeeList,
 } from './style'
 
 export function Home() {
   return (
-    <div>
+    <HomeContainer>
       <IntroContainer>
         <IntroDescriptionContainer>
           <TitleContainer>
@@ -52,7 +54,7 @@ export function Home() {
       </IntroContainer>
 
       <section>
-        <h2>Nossos cafés</h2>
+        <CoffeeTitle>Nossos cafés</CoffeeTitle>
 
         <CoffeeList>
           {coffees.map((coffee) => (
@@ -60,6 +62,6 @@ export function Home() {
           ))}
         </CoffeeList>
       </section>
-    </div>
+    </HomeContainer>
   )
 }

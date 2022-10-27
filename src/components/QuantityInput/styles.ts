@@ -29,8 +29,13 @@ const QuantityButtons = styled.button`
   background: 0;
   border: 0;
   line-height: 0;
+  cursor: pointer;
 
-  color: ${(props) => props.theme.purple}
+  color: ${(props) => props.theme.purple};
+
+  &:hover {
+    color: ${(props) => props.theme['purple-dark']};
+  }
 `
 
 export const MinusButton = styled(QuantityButtons)`

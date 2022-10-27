@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+export const HomeContainer = styled.div`
+  margin-bottom: 9.813rem;
+`
+
 export const IntroContainer = styled.section`
   display: flex;
   justify-content: center;
@@ -39,6 +43,15 @@ export const InfoIntroItems = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 1.25rem;
+`
+
+export const CoffeeTitle = styled.h2`
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.875rem;
+
+  color: ${(props) => props.theme['base-subtitle']};
 `
 
 export const CoffeeList = styled.div`
