@@ -74,6 +74,7 @@ export const PriceFooter = styled.footer`
   align-items: center;
   justify-content: space-between;
 `
+
 export const RegularText = styled.span`
   font-size: 0.875rem;
 `

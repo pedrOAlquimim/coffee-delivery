@@ -8,7 +8,7 @@ export function Header() {
     <HeaderContainer>
       <nav>
         <NavLink to="/">
-          <img src={logoBrand} />
+          <img src={logoBrand} alt="" />
         </NavLink>
 
         <div>

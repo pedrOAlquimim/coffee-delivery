@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { ShoppingCart } from 'phosphor-react'
 import { formatMoney } from '../../../../uses/formatPrice'
 import {
@@ -30,7 +31,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   return (
     <CoffeeCardContainer>
       <HeaderCardContainer>
-        <img src={`/src/assets/coffeesImages/${coffee.photo}`} />
+        <img src={`/src/assets/coffeesImages/${coffee.photo}`} alt='' />
         <Tags>
           {coffee.tags.map((tags) => (
             <span key={coffee.id}>{tags}</span>
