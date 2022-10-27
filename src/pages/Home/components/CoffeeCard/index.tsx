@@ -1,6 +1,6 @@
-/* eslint-disable prettier/prettier */
 import { ShoppingCart } from 'phosphor-react'
 import { formatMoney } from '../../../../uses/formatPrice'
+import { QuantityInput } from '../.././../../components/QuantityInput'
 import {
   CoffeeCardContainer,
   HeaderCardContainer,
@@ -51,6 +51,8 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
         </div>
 
         <AmountAndCart>
+          <QuantityInput />
+
           <button>
             <ShoppingCart size={22} weight="fill" />
           </button>

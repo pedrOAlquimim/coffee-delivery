@@ -73,6 +73,7 @@ export const PriceFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.438rem;
 `
 
 export const RegularText = styled.span`
