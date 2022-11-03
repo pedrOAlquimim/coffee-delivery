@@ -1,4 +1,5 @@
 import { MapPinLine } from 'phosphor-react'
+import { Input } from '../../components/Input'
 import {
   CheckoutContainer,
   Title,
@@ -25,13 +26,7 @@ export function Checkout() {
 
           <form>
             <Form>
-              <input type="number" />
-              <input type="text" />
-              <input type="number" />
-              <input type="text" />
-              <input type="text" />
-              <input type="text" />
-              <input type="text" />
+              <Input />
             </Form>
           </form>
         </FormContainer>
