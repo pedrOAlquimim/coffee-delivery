@@ -1,11 +1,7 @@
-import { MapPinLine } from 'phosphor-react'
-import { Input } from '../../components/Input'
+import { Form } from './components/Form'
 import {
   CheckoutContainer,
   Title,
-  FormContainer,
-  FormHeader,
-  Form
 } from './styles'
 
 export function Checkout() {
@@ -13,26 +9,9 @@ export function Checkout() {
     <CheckoutContainer>
       <div>
         <Title>Complete seu pedido</Title>
-        <FormContainer>
-          <FormHeader>
-            <span>
-              <MapPinLine />
-            </span>
-            <div>
-              <h4>Endereço de Entrega</h4>
-              <p>Informe o endereço onde deseja receber seu pedido</p>
-            </div>
-          </FormHeader>
-
-          <form>
-            <Form>
-              <Input />
-            </Form>
-          </form>
-        </FormContainer>
+        <Form />
 
         <div>
-
         </div>
       </div>
 
