@@ -20,13 +20,38 @@ export function Form() {
       </FormHeader>
 
       <FormTag>
-        <Input placeholder='CEP' type='number' className='cep' />
-        <Input placeholder='Rua' type='string' />
-        <Input placeholder='Número' type='number' />
-        <Input placeholder='Complemento' type='string' />
-        <Input placeholder='Bairro' type='string' />
-        <Input placeholder='Cidade' type='string' />
-        <Input placeholder='UF' type='string' />
+        <Input
+          placeholder='CEP'
+          type='number'
+          className='cep'
+        />
+        <Input
+          placeholder='Rua'
+          type='string'
+          className='street'
+        />
+        <Input
+          placeholder='Número'
+          type='number'
+        />
+        <Input
+          placeholder='Complemento'
+          type='string'
+          className='complement'
+          optional
+        />
+        <Input
+          placeholder='Bairro'
+          type='string'
+        />
+        <Input
+          placeholder='Cidade'
+          type='string'
+        />
+        <Input
+          placeholder='UF'
+          type='string'
+        />
       </FormTag>
     </FormContainer>
   )

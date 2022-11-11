@@ -16,7 +16,7 @@ export const FormHeader = styled.header`
 
   span {
     font-size: 1.375rem;
-    color: ${(props) => props.theme["yellow-dark"]}
+    color: ${(props) => props.theme["yellow-dark"]};
   }
 
   div {
@@ -48,5 +48,13 @@ export const FormTag = styled.form`
   .cep {
     grid-column: span 3;
     max-width: 12.5rem;
+  }
+
+  .street {
+    grid-column: span 3;
+  }
+
+  .complement {
+    grid-column: span 2;
   }
 `
