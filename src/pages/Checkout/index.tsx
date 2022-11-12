@@ -1,9 +1,12 @@
-import { CreditCard, CurrencyDollar } from 'phosphor-react'
+import { Bank, CreditCard, CurrencyDollar, Money } from 'phosphor-react'
 import { Form } from './components/Form'
 import { PaymentButton } from './components/PaymentButton'
 import {
   CheckoutContainer,
   Title,
+  PaymentForm,
+  PaymentFormHeader,
+  PaymentFormButtons,
 } from './styles'
 
 export function Checkout() {
@@ -13,8 +16,8 @@ export function Checkout() {
         <Title>Complete seu pedido</Title>
         <Form />
 
-        <div>
-          <header>
+        <PaymentForm>
+          <PaymentFormHeader>
             <span>
               <CurrencyDollar />
             </span>
@@ -22,15 +25,23 @@ export function Checkout() {
               <h4>Pagamento</h4>
               <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
             </div>
-          </header>
+          </PaymentFormHeader>
 
-          <div>
+          <PaymentFormButtons>
             <PaymentButton
               icon={<CreditCard size={16} />}
-              text="Cartao de Credito"
+              text="Cartão de Crédito"
             />
-          </div>
-        </div>
+            <PaymentButton
+              icon={<Bank size={16} />}
+              text="Cartão de Débito"
+            />
+            <PaymentButton
+              icon={<Money size={16} />}
+              text="Dinheiro"
+            />
+          </PaymentFormButtons>
+        </PaymentForm>
       </div>
 
       <div>

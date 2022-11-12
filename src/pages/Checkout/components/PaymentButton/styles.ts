@@ -14,6 +14,11 @@ export const PaymentButtonContainer = styled.button`
   &:hover {
     background: ${(props) => props.theme["base-hover"]};
   }
+
+  &:focus {
+    outline: 1px solid ${(props) => props.theme.purple};
+    background: ${(props) => props.theme["purple-light"]};
+  }
 `
 
 export const Icon = styled.span`
