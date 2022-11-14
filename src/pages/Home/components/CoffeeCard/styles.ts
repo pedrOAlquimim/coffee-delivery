@@ -91,6 +91,7 @@ export const Price = styled.span`
 
 export const AmountAndCart = styled.div`
   display: flex;
+  width: 7.25rem;
   gap: 0.5rem;
 
   > button {

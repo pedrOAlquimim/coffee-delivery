@@ -8,23 +8,11 @@ interface PaddingProps {
 
 export const QuantityInputContainer = styled.div<PaddingProps>`
   display: flex;
+  flex: 1;
+  gap: 0.25rem;
   border-radius: 6px;
-  justify-content: space-between;
-  text-align: center;
   align-items: center;
   background: ${(props) => props.theme['base-button']};
-
-  input {
-    text-align: center;
-    width: 100%;
-    background: yellow;
-    border: none;
-    color: ${(props) => props.theme["base-title"]};
-
-    &:focus {
-      outline: 0;
-    }
-  }
 
   ${(props) => props.paddingSize === 'small' &&
     css`
@@ -34,18 +22,25 @@ export const QuantityInputContainer = styled.div<PaddingProps>`
 
   ${(props) => props.paddingSize === 'medium' &&
     css`
-      padding: 0.531rem 0.5rem;
+      padding: 0.5rem;
     `
   }
 `
 
+export const QuantityText = styled.p`
+  line-height: 130%;
+  color: ${(props) => props.theme["base-title"]};
+
+  &:focus {
+    outline: 0;
+  }
+`
+
 export const QuantityButtons = styled.button`
-  font-size: 0.875rem;
   background: 0;
   border: 0;
   line-height: 0;
   cursor: pointer;
-
   color: ${(props) => props.theme.purple};
 
   &:hover {

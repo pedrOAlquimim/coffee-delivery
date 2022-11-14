@@ -6,7 +6,8 @@ import {
   CartCoffeeCardOptions,
   CartCoffeeCardOptionsButtons,
   Buttons,
-  RemoveButton
+  RemoveButton,
+  CartCoffeeCardPrice
 } from './styles'
 
 export function CartCoffeeCard() {
@@ -30,7 +31,7 @@ export function CartCoffeeCard() {
         </CartCoffeeCardOptionsButtons>
       </CartCoffeeCardOptions>
 
-      <p>R$ 9,90</p>
+      <CartCoffeeCardPrice>R$ 10,90</CartCoffeeCardPrice>
     </CartCoffeeCardContainer>
   )
 }

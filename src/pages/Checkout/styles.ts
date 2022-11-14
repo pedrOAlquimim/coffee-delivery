@@ -7,6 +7,7 @@ export const CheckoutContainer = styled.div`
 `
 export const Container = styled.div`
   margin-top: 2.5rem;
+  width: 100%;
 `
 
 export const Title = styled.h3`

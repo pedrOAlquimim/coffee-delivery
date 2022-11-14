@@ -3,6 +3,7 @@ import {
   paddingSizeType,
   QuantityInputContainer,
   QuantityButtons,
+  QuantityText
 } from './styles'
 
 interface QuantityInputProps {
@@ -13,13 +14,13 @@ export function QuantityInput({ paddingSize }: QuantityInputProps) {
   return (
     <QuantityInputContainer paddingSize={paddingSize}>
       <QuantityButtons>
-        <Minus weight='bold' />
+        <Minus size={14} weight='bold' />
       </QuantityButtons>
 
-      <input type="number" readOnly value={25} />
+      <QuantityText>{20}</QuantityText>
 
       <QuantityButtons>
-        <Plus weight='bold' />
+        <Plus size={14} weight='bold' />
       </QuantityButtons>
     </QuantityInputContainer>
   )

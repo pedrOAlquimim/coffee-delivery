@@ -1,24 +1,17 @@
 import styled from "styled-components";
 
 export const CartCoffeeCardContainer = styled.div`
-  width: 100%;
+  max-width: 28rem; 
   display: flex;
-  gap: 3.125rem;
+  justify-content: space-between;
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid ${(props) => props.theme["base-button"]};
-
-  p {
-    font-weight: bold;
-    color: ${(props) => props.theme["base-text"]};
-  }
 `
 
 export const CartCoffeeCardOptions = styled.div`
-  width: 100%;
   display: flex;
   gap: 1.25rem;
-  max-width: 15.938rem;
 
   img {
     width: 4rem;
@@ -26,7 +19,7 @@ export const CartCoffeeCardOptions = styled.div`
 `
 
 export const CartCoffeeCardOptionsButtons = styled.div`
-  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -65,4 +58,10 @@ export const RemoveButton = styled.button`
     line-height: 0;
     color: ${(props) => props.theme.purple};
   }
+`
+
+export const CartCoffeeCardPrice = styled.p`
+  font-weight: bold;
+  line-height: 130%;
+  color: ${(props) => props.theme["base-text"]};
 `
