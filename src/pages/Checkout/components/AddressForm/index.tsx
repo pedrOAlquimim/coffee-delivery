@@ -6,7 +6,7 @@ import {
   FormTag
 } from './styles'
 
-export function Form() {
+export function AddressForm() {
   return (
     <FormContainer>
       <FormHeader>

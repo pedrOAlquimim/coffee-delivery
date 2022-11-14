@@ -1,22 +1,26 @@
 import { Minus, Plus } from 'phosphor-react'
 import {
+  paddingSizeType,
   QuantityInputContainer,
-  MinusButton,
-  PlusButton,
+  QuantityButtons,
 } from './styles'
 
-export function QuantityInput() {
+interface QuantityInputProps {
+  paddingSize: paddingSizeType
+}
+
+export function QuantityInput({ paddingSize }: QuantityInputProps) {
   return (
-    <QuantityInputContainer>
-      <MinusButton>
+    <QuantityInputContainer paddingSize={paddingSize}>
+      <QuantityButtons>
         <Minus weight='bold' />
-      </MinusButton>
+      </QuantityButtons>
 
-      <input type="number" readOnly />
+      <input type="number" readOnly value={25} />
 
-      <PlusButton>
+      <QuantityButtons>
         <Plus weight='bold' />
-      </PlusButton>
+      </QuantityButtons>
     </QuantityInputContainer>
   )
 }

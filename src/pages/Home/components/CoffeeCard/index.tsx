@@ -51,7 +51,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
         </div>
 
         <AmountAndCart>
-          <QuantityInput />
+          <QuantityInput paddingSize='medium' />
 
           <button>
             <ShoppingCart size={22} weight="fill" />

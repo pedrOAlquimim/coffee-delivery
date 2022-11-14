@@ -1,20 +1,24 @@
 import { Bank, CreditCard, CurrencyDollar, Money } from 'phosphor-react'
-import { Form } from './components/Form'
+import { AddressForm } from './components/AddressForm'
+import { CartCoffeeCard } from './components/CartCoffeeCard'
 import { PaymentButton } from './components/PaymentButton'
 import {
   CheckoutContainer,
+  Container,
   Title,
   PaymentForm,
   PaymentFormHeader,
   PaymentFormButtons,
+  SelectedCoffeesContainer,
+  ConfirmOrderButton,
 } from './styles'
 
 export function Checkout() {
   return (
     <CheckoutContainer>
-      <div>
+      <Container>
         <Title>Complete seu pedido</Title>
-        <Form />
+        <AddressForm />
 
         <PaymentForm>
           <PaymentFormHeader>
@@ -42,11 +46,34 @@ export function Checkout() {
             />
           </PaymentFormButtons>
         </PaymentForm>
-      </div>
+      </Container>
 
-      <div>
-        <h3>Cafés selecionados</h3>
-      </div>
+      <Container>
+        <Title>Cafés selecionados</Title>
+
+        <SelectedCoffeesContainer>
+          <CartCoffeeCard />
+
+          <div>
+            <div>
+              <p>Total de itens</p>
+              <p>R$ 29,70</p>
+            </div>
+            <div>
+              <p>Entrega</p>
+              <p>R$ 3,50</p>
+            </div>
+            <div>
+              <p>Total</p>
+              <p>R$ 33,20</p>
+            </div>
+          </div>
+
+          <ConfirmOrderButton>
+            Confirmar Pedido
+          </ConfirmOrderButton>
+        </SelectedCoffeesContainer>
+      </Container>
     </CheckoutContainer>
   )
 }

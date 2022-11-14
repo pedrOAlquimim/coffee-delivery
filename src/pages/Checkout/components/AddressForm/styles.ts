@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.div`
-  max-width: 40rem;
   width: 100%;
+  max-width: 40rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
   padding: 2.5rem;
   border-radius: 6px;
 
