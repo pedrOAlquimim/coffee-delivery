@@ -25,7 +25,6 @@ export const FormHeader = styled.header`
     gap: 0.125rem;
 
     h4 {
-      line-height: 130%;
       font-weight: 400;
       font-size: 1rem;
 

@@ -13,7 +13,6 @@ export const Container = styled.div`
 export const Title = styled.h3`
   font-family: 'Baloo 2', sans-serif;
   font-size: 1.125rem;
-  line-height: 130%;
   font-weight: bold;
   color: ${(props) => props.theme['base-subtitle']};
 `
@@ -40,7 +39,6 @@ export const PaymentFormHeader = styled.header`
     gap: 0.125rem;
 
     h4 {
-      line-height: 130%;
       font-weight: 400;
       font-size: 1rem;
 
@@ -58,7 +56,6 @@ export const PaymentFormButtons = styled.div`
   display: flex;
   gap: 0.75rem;
 `
-
 
 export const SelectedCoffeesContainer = styled.div`
   width: 100%;
@@ -84,7 +81,6 @@ export const PriceContainer = styled.div`
 export const PriceTotal = styled.p`
   font-size: 1.25rem;
   font-weight: bold;
-  line-height: 130%;
   color: ${(props) => props.theme["base-subtitle"]};
 `
 

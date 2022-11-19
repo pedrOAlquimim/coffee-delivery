@@ -29,7 +29,6 @@ export const QuantityInputContainer = styled.div<PaddingProps>`
 `
 
 export const QuantityText = styled.p`
-  line-height: 130%;
   color: ${(props) => props.theme["base-title"]};
 
   &:focus {

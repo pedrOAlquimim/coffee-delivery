@@ -26,6 +26,5 @@ export const Icon = styled.div<InfoIconStylesProps>`
   font-size: 1rem;
 
   color: ${(props) => props.theme.background};
-  background: ${(props) =>
-    props.theme[backgroundColorType[props.backgroundColor]]};
+  background: ${(props) => props.theme[backgroundColorType[props.backgroundColor]]};
 `

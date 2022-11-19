@@ -42,9 +42,7 @@ export const Tags = styled.div`
     font-weight: 700;
     border-radius: 999px;
     text-transform: uppercase;
-    line-height: 130%;
     padding: 0.25rem 0.5rem;
-
     color: ${(props) => props.theme['yellow-dark']};
     background: ${(props) => props.theme['yellow-light']};
   }
@@ -55,16 +53,12 @@ export const Title = styled.div`
     font-family: 'baloo 2', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
-    line-height: 130%;
     margin-bottom: 0.5rem;
-
     color: ${(props) => props.theme['base-subtitle']};
   }
 
   p {
     font-size: 0.875rem;
-    line-height: 130%;
-
     color: ${(props) => props.theme['base-label']};
   }
 `
@@ -99,7 +93,6 @@ export const AmountAndCart = styled.div`
     padding: 0.5rem 0.5rem 0.375rem 0.5rem;
     border-radius: 6px;
     cursor: pointer;
-
     color: ${(props) => props.theme['base-card']};
     background: ${(props) => props.theme['purple-dark']};
 
@@ -114,6 +107,5 @@ export const AmountButtonContainer = styled.div`
   align-items: center;
   border-radius: 6px;
   gap: 0.25rem;
-
   background: ${(props) => props.theme['base-button']};
 `

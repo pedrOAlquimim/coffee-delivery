@@ -27,7 +27,6 @@ export const CartCoffeeCardOptionsButtons = styled.div`
   h3 {
     font-size: 1rem;
     font-weight: 400;
-    line-height: 130%;
     color: ${(props) => props.theme["base-text"]};
   }
 `
@@ -62,6 +61,5 @@ export const RemoveButton = styled.button`
 
 export const CartCoffeeCardPrice = styled.p`
   font-weight: bold;
-  line-height: 130%;
   color: ${(props) => props.theme["base-text"]};
 `
