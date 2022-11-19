@@ -69,6 +69,25 @@ export const SelectedCoffeesContainer = styled.div`
   background-color: ${(props) => props.theme["base-card"]};
 `
 
+export const PriceContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+`
+
+export const PriceTotal = styled.p`
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 130%;
+  color: ${(props) => props.theme["base-subtitle"]};
+`
+
 export const ConfirmOrderButton = styled.button`
   width: 100%;
   line-height: 160%;

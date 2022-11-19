@@ -8,6 +8,7 @@ interface PaddingProps {
 
 export const QuantityInputContainer = styled.div<PaddingProps>`
   display: flex;
+  justify-content: space-between;
   flex: 1;
   gap: 0.25rem;
   border-radius: 6px;

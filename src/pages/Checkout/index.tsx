@@ -10,6 +10,8 @@ import {
   PaymentFormHeader,
   PaymentFormButtons,
   SelectedCoffeesContainer,
+  PriceContainer,
+  PriceTotal,
   ConfirmOrderButton,
 } from './styles'
 
@@ -54,7 +56,7 @@ export function Checkout() {
         <SelectedCoffeesContainer>
           <CartCoffeeCard />
 
-          <div>
+          <PriceContainer>
             <div>
               <p>Total de itens</p>
               <p>R$ 29,70</p>
@@ -64,10 +66,10 @@ export function Checkout() {
               <p>R$ 3,50</p>
             </div>
             <div>
-              <p>Total</p>
-              <p>R$ 33,20</p>
+              <PriceTotal>Total</PriceTotal>
+              <PriceTotal>R$ 33,20</PriceTotal>
             </div>
-          </div>
+          </PriceContainer>
 
           <ConfirmOrderButton>
             Confirmar Pedido
