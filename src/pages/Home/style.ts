@@ -24,12 +24,14 @@ export const TitleContainer = styled.div`
   h1 {
     font-family: 'Baloo 2', sans-serif;
     font-size: 3rem;
+    line-height: 130%;
     font-weight: 800;
     color: ${(props) => props.theme['base-title']};
   }
 
   p {
     font-size: 1.25rem;
+    line-height: 130%;
     color: ${(props) => props.theme['base-subtitle']};
   }
 `

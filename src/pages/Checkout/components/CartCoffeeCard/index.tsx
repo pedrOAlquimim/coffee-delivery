@@ -1,6 +1,6 @@
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { Trash } from 'phosphor-react'
-import traditional from '../../../../assets/coffeesImages/tradicional.png'
+import { CartItems } from '../../../../context/CoffeeCartContext'
 import {
   CartCoffeeCardContainer,
   CartCoffeeCardOptions,
@@ -10,17 +10,23 @@ import {
   CartCoffeeCardPrice
 } from './styles'
 
-export function CartCoffeeCard() {
+interface CartCoffeeCardProps {
+  coffee: CartItems
+}
+
+export function CartCoffeeCard({coffee}: CartCoffeeCardProps) {
   return (
     <CartCoffeeCardContainer>
       <CartCoffeeCardOptions>
-        <img src={traditional} />
+        <img src={`/src/assets/coffeesImages/${coffee.photo}`} />
 
         <CartCoffeeCardOptionsButtons>
-          <h3>Expresso Tradicional</h3>
+          <h3>{coffee.name}</h3>
 
           <Buttons>
-            <QuantityInput paddingSize='small' />
+            <QuantityInput
+              paddingSize='small'
+            />
             <RemoveButton>
               <span>
                 <Trash size={16} />
@@ -31,7 +37,7 @@ export function CartCoffeeCard() {
         </CartCoffeeCardOptionsButtons>
       </CartCoffeeCardOptions>
 
-      <CartCoffeeCardPrice>R$ 10,90</CartCoffeeCardPrice>
+      <CartCoffeeCardPrice>R$ {coffee.price}</CartCoffeeCardPrice>
     </CartCoffeeCardContainer>
   )
 }

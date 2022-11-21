@@ -54,7 +54,6 @@ export function Checkout() {
         <Title>Cafés selecionados</Title>
 
         <SelectedCoffeesContainer>
-          <CartCoffeeCard />
 
           <PriceContainer>
             <div>
