@@ -19,7 +19,7 @@ export function CoffeeCartContextProvider({ children }: coffeeCartContextProvide
   const [coffeesCart, setCoffeesCart] = useState<CartItems[]>([])
 
   function addCoffeesToCart(coffee: CartItems) {
-
+    
   }
 
   return (

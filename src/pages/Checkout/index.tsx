@@ -1,18 +1,10 @@
-import { Bank, CreditCard, CurrencyDollar, Money } from 'phosphor-react'
 import { AddressForm } from './components/AddressForm'
-import { CartCoffeeCard } from './components/CartCoffeeCard'
-import { PaymentButton } from './components/PaymentButton'
+import { PaymentForm } from './components/PaymentForm'
+import { SelectedCoffees } from './components/SelectedCoffees'
 import {
   CheckoutContainer,
   Container,
   Title,
-  PaymentForm,
-  PaymentFormHeader,
-  PaymentFormButtons,
-  SelectedCoffeesContainer,
-  PriceContainer,
-  PriceTotal,
-  ConfirmOrderButton,
 } from './styles'
 
 export function Checkout() {
@@ -22,58 +14,12 @@ export function Checkout() {
         <Title>Complete seu pedido</Title>
         <AddressForm />
 
-        <PaymentForm>
-          <PaymentFormHeader>
-            <span>
-              <CurrencyDollar />
-            </span>
-            <div>
-              <h4>Pagamento</h4>
-              <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
-            </div>
-          </PaymentFormHeader>
-
-          <PaymentFormButtons>
-            <PaymentButton
-              icon={<CreditCard size={16} />}
-              text="Cartão de Crédito"
-            />
-            <PaymentButton
-              icon={<Bank size={16} />}
-              text="Cartão de Débito"
-            />
-            <PaymentButton
-              icon={<Money size={16} />}
-              text="Dinheiro"
-            />
-          </PaymentFormButtons>
-        </PaymentForm>
+        <PaymentForm />
       </Container>
 
       <Container>
         <Title>Cafés selecionados</Title>
-
-        <SelectedCoffeesContainer>
-
-          <PriceContainer>
-            <div>
-              <p>Total de itens</p>
-              <p>R$ 29,70</p>
-            </div>
-            <div>
-              <p>Entrega</p>
-              <p>R$ 3,50</p>
-            </div>
-            <div>
-              <PriceTotal>Total</PriceTotal>
-              <PriceTotal>R$ 33,20</PriceTotal>
-            </div>
-          </PriceContainer>
-
-          <ConfirmOrderButton>
-            Confirmar Pedido
-          </ConfirmOrderButton>
-        </SelectedCoffeesContainer>
+        <SelectedCoffees />
       </Container>
     </CheckoutContainer>
   )
