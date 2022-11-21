@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { coffeeCartContext } from '../../../../context/CoffeeCartContext'
+import { CartCoffeeCard } from '../CartCoffeeCard'
 import {
   SelectedCoffeesContainer,
   PriceContainer,
@@ -6,8 +9,15 @@ import {
 } from './styles'
 
 export function SelectedCoffees() {
+  const {coffeesCart} = useContext(coffeeCartContext)
+
+
   return (
     <SelectedCoffeesContainer>
+
+      {coffeesCart?.map((coffee) => (
+        <CartCoffeeCard key={coffee.id} coffee={coffee} />
+      ))}
 
       <PriceContainer>
         <div>

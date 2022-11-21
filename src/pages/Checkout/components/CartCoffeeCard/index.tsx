@@ -26,6 +26,7 @@ export function CartCoffeeCard({coffee}: CartCoffeeCardProps) {
           <Buttons>
             <QuantityInput
               paddingSize='small'
+              quantity={coffee.quantity}
             />
             <RemoveButton>
               <span>
