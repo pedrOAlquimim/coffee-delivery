@@ -41,8 +41,8 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   }
 
   function handleAddCoffeeToCart() {
-    const addNewCoffeeToCart = {...coffee, quantity }
-    addCoffeesToCart(addNewCoffeeToCart)
+    const addNewCoffeeToCart = { ...coffee, quantity}
+   console.log(addCoffeesToCart(addNewCoffeeToCart))
   }
 
   const formattedPrice = formatMoney(coffee.price)
