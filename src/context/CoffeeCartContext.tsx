@@ -22,8 +22,11 @@ export function CoffeeCartContextProvider({ children }: coffeeCartContextProvide
   const coffeesCartSize = coffeesCart.length
 
   function addCoffeesToCart(coffee: CartItems) {
-
+    const orderAlreadyExist = coffeesCart.find((item) => {
+      item.id === coffee.id
+    })
   }
+
 
   return (
     <coffeeCartContext.Provider value={{
@@ -33,8 +36,4 @@ export function CoffeeCartContextProvider({ children }: coffeeCartContextProvide
       {children}
     </coffeeCartContext.Provider>
   )
-}
-
-function produce(cartItems: any, arg1: (draft: any) => void) {
-  throw new Error("Function not implemented.");
 }
