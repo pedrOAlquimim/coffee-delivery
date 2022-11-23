@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { ButtonHTMLAttributes, FormEvent, useContext, useState } from 'react'
 import { ShoppingCart } from 'phosphor-react'
 import { formatMoney } from '../../../../uses/formatPrice'
 import { QuantityInput } from '../.././../../components/QuantityInput'
@@ -21,6 +21,7 @@ export interface CoffeesProps {
   description: string
   photo: string
   price: number
+  quantity: number
 }
 
 interface CoffeeCardProps {
@@ -42,7 +43,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
 
   function handleAddCoffeeToCart() {
     const addNewCoffeeToCart = { ...coffee, quantity}
-    addCoffeesToCart(addNewCoffeeToCart)
+    console.log(addNewCoffeeToCart)
   }
 
   const formattedPrice = formatMoney(coffee.price)
