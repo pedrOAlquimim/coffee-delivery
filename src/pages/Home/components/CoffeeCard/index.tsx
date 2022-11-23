@@ -1,8 +1,8 @@
-import { ButtonHTMLAttributes, FormEvent, useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { ShoppingCart } from 'phosphor-react'
 import { formatMoney } from '../../../../uses/formatPrice'
 import { QuantityInput } from '../.././../../components/QuantityInput'
-import { coffeeCartContext } from '../../../../context/CoffeeCartContext'
+import { CoffeeCartContext } from '../../../../context/CoffeeCartContext'
 import {
   CoffeeCardContainer,
   HeaderCardContainer,
@@ -15,7 +15,7 @@ import {
 } from './styles'
 
 export interface CoffeesProps {
-  id: number
+  id: string
   tags: string[]
   name: string
   description: string
@@ -29,7 +29,7 @@ interface CoffeeCardProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
-  const { addCoffeesToCart } = useContext(coffeeCartContext)
+  const { addCoffeesToCart } = useContext(CoffeeCartContext)
 
   const [ quantity, setQuantity ] = useState(1)
 
@@ -42,8 +42,8 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   }
 
   function handleAddCoffeeToCart() {
-    const addNewCoffeeToCart = { ...coffee, quantity}
-    console.log(addNewCoffeeToCart)
+    const addNewCoffeeToCart = { ...coffee, quantity }
+    addCoffeesToCart(addNewCoffeeToCart)
   }
 
   const formattedPrice = formatMoney(coffee.price)

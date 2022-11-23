@@ -1,18 +1,18 @@
 import { createContext, ReactNode, useState } from "react";
 import { CoffeesProps } from "../pages/Home/components/CoffeeCard";
 
-interface coffeeCartContextType {
+interface CoffeeCartContextType {
   coffeesCart: CoffeesProps[]
   addCoffeesToCart: (coffee: CoffeesProps) => void
 }
 
-interface coffeeCartContextProviderProps {
+interface CoffeeCartContextProviderProps {
   children: ReactNode
 }
 
-export const coffeeCartContext = createContext({} as coffeeCartContextType)
+export const CoffeeCartContext = createContext({} as CoffeeCartContextType)
 
-export function CoffeeCartContextProvider({ children }: coffeeCartContextProviderProps) {
+export function CoffeeCartContextProvider({ children }: CoffeeCartContextProviderProps) {
   const [coffeesCart, setCoffeesCart] = useState<CoffeesProps[]>([])
 
   const coffeesCartSize = coffeesCart.length
@@ -22,18 +22,27 @@ export function CoffeeCartContextProvider({ children }: coffeeCartContextProvide
       item.id === coffee.id
     })
 
-    const newOrder = () => {
-      
-    }
+    const newOrder = coffeesCart.map((state) => {
+      if (orderAlreadyExist) {
+        return {
+          ...state,
+          quantity: state.quantity + coffee.quantity
+        }
+      } else {
+        return state
+      }
+    })
+    
+    setCoffeesCart(newOrder)
   }
 
 
   return (
-    <coffeeCartContext.Provider value={{
+    <CoffeeCartContext.Provider value={{
       coffeesCart,
-      addCoffeesToCart
+      addCoffeesToCart,
     }}>
       {children}
-    </coffeeCartContext.Provider>
+    </CoffeeCartContext.Provider>
   )
 }
