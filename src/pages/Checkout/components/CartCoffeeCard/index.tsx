@@ -1,6 +1,6 @@
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { Trash } from 'phosphor-react'
-import { CartItems } from '../../../../context/CoffeeCartContext'
+import { CoffeesProps } from '../../../Home/components/CoffeeCard'
 import {
   CartCoffeeCardContainer,
   CartCoffeeCardOptions,
@@ -11,10 +11,10 @@ import {
 } from './styles'
 
 interface CartCoffeeCardProps {
-  coffee: CartItems
+  coffee: CoffeesProps
 }
 
-export function CartCoffeeCard({coffee}: CartCoffeeCardProps) {
+export function CartCoffeeCard({ coffee }: CartCoffeeCardProps) {
   return (
     <CartCoffeeCardContainer>
       <CartCoffeeCardOptions>
