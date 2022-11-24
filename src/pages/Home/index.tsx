@@ -14,6 +14,7 @@ import {
 } from './style'
 
 export function Home() {
+
   return (
     <HomeContainer>
       <IntroContainer>

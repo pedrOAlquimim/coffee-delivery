@@ -10,18 +10,14 @@ import {
 
 export function SelectedCoffees() {
   const {coffeesCart} = useContext(CoffeeCartContext)
-
-
+  console.log(coffeesCart)
   return (
     <SelectedCoffeesContainer>
 
-      { coffeesCart 
-        ?
-          coffeesCart.map((item) => (
-            <CartCoffeeCard key={item.id} coffee={item} />
-          ))
-        :
-          <></>
+      {
+        coffeesCart.map((item) => (
+          <CartCoffeeCard key={item.id} coffee={item} />
+        ))
       }
 
       <PriceContainer>

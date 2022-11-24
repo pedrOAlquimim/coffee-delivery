@@ -3,7 +3,7 @@ import { Router } from './Router'
 import { defaultTheme } from './styles/themes/default'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from './styles/global'
-import { CoffeeCartContextProvider } from './context/coffeeCartContext'
+import { CoffeeCartContextProvider } from './context/CoffeeCartContext'
 
 export function App() {
   return (

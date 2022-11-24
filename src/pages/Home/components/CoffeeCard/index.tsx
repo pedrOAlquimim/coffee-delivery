@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FormEvent, useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { ShoppingCart } from 'phosphor-react'
 import { formatMoney } from '../../../../uses/formatPrice'
 import { QuantityInput } from '../.././../../components/QuantityInput'
@@ -15,7 +15,7 @@ import {
 } from './styles'
 
 export interface CoffeesProps {
-  id: number
+  id: string
   tags: string[]
   name: string
   description: string
@@ -54,7 +54,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
         <img src={`/src/assets/coffeesImages/${coffee.photo}`} alt='' />
         <Tags>
           {coffee.tags.map((tags) => (
-            <span key={coffee.id}>{tags}</span>
+            <span key={tags}>{tags}</span>
           ))}
         </Tags>
       </HeaderCardContainer>

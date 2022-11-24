@@ -15,33 +15,30 @@ export const CoffeeCartContext = createContext({} as CoffeeCartContextType)
 export function CoffeeCartContextProvider({ children }: CoffeeCartContextProviderProps) {
   const [coffeesCart, setCoffeesCart] = useState<CoffeesProps[]>([])
 
-  const coffeesCartSize = coffeesCart.length
-
   function addCoffeesToCart(coffee: CoffeesProps) {
     const orderAlreadyExist = coffeesCart.findIndex((item) => {
       item.id === coffee.id
     })
-    const newOrder = coffeesCart.map((state) => {
-      if (orderAlreadyExist < 0) {
-        return {
-          ...state,
-          quantity: state.quantity + coffee.quantity
+    
+    setCoffeesCart((state) => 
+      state.map((item) => {
+        if(orderAlreadyExist < 0) {
+          return {
+            ...item,
+            quantity: item.quantity + coffee.quantity
+          }
+        } else {
+          return coffee
         }
-      } else {
-        return {
-          ...coffee
-        }
-      }
-    })
-
-    setCoffeesCart(newOrder)
+      })
+    )
   }
 
 
   return (
     <CoffeeCartContext.Provider value={{
       coffeesCart,
-      addCoffeesToCart
+      addCoffeesToCart,
     }}>
       {children}
     </CoffeeCartContext.Provider>
