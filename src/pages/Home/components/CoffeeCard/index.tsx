@@ -29,7 +29,7 @@ interface CoffeeCardProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
-  const { addCoffeesToCart } = useContext(CoffeeCartContext)
+  const { addCoffeesToCart, coffeesCart } = useContext(CoffeeCartContext)
 
   const [ quantity, setQuantity ] = useState(1)
 

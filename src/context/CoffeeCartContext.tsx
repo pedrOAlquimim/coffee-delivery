@@ -15,8 +15,6 @@ export const CoffeeCartContext = createContext({} as CoffeeCartContextType)
 export function CoffeeCartContextProvider({ children }: CoffeeCartContextProviderProps) {
   const [coffeesCart, setCoffeesCart] = useState<CoffeesProps[]>([])
 
-  const coffeesCartSize = coffeesCart.length
-
   function addCoffeesToCart(coffee: CoffeesProps) {
     const orderAlreadyExist = coffeesCart.find((item) => {
       item.id === coffee.id
@@ -33,7 +31,7 @@ export function CoffeeCartContextProvider({ children }: CoffeeCartContextProvide
       }
     })
     
-    setCoffeesCart(newOrder)
+    setCoffeesCart(newOrder) 
   }
 
 
