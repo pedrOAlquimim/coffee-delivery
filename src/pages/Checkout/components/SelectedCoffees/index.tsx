@@ -13,9 +13,7 @@ export function SelectedCoffees() {
   console.log(coffeesCart)
   return (
     <SelectedCoffeesContainer>
-
-      {
-        coffeesCart.map((item) => (
+      {coffeesCart.map((item) => (
           <CartCoffeeCard key={item.id} coffee={item} />
         ))
       }

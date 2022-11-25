@@ -9,6 +9,7 @@ import {
   RemoveButton,
   CartCoffeeCardPrice
 } from './styles'
+import { formatMoney } from '../../../../uses/formatPrice'
 
 
 interface CartCoffeeCardProps {
@@ -16,6 +17,8 @@ interface CartCoffeeCardProps {
 }
 
 export function CartCoffeeCard({ coffee }: CartCoffeeCardProps) {
+  const formattedPrice = formatMoney(coffee.price)
+
   return (
     <CartCoffeeCardContainer>
       <CartCoffeeCardOptions>
@@ -39,7 +42,7 @@ export function CartCoffeeCard({ coffee }: CartCoffeeCardProps) {
         </CartCoffeeCardOptionsButtons>
       </CartCoffeeCardOptions>
 
-      <CartCoffeeCardPrice>R$ {coffee.price}</CartCoffeeCardPrice>
+      <CartCoffeeCardPrice>R$ {formattedPrice}</CartCoffeeCardPrice>
     </CartCoffeeCardContainer>
   )
 }
