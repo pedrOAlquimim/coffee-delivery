@@ -46,4 +46,8 @@ export const QuantityButtons = styled.button`
   &:hover {
     color: ${(props) => props.theme['purple-dark']};
   }
+
+  &:disabled {
+    opacity: 0.4;
+  }
 `

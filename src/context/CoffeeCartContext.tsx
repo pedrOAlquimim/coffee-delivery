@@ -17,24 +17,26 @@ export function CoffeeCartContextProvider({ children }: CoffeeCartContextProvide
   const [coffeesCart, setCoffeesCart] = useState<CoffeesProps[]>([])
 
   function addCoffeesToCart(coffee: CoffeesProps) {
-    const orderAlreadyExist = coffeesCart.findIndex((coffeeCart) => {
-      coffeeCart.id === coffee.id
+    const orderAlreadyExist = coffeesCart.find((coffeeCart) => {
+      return coffeeCart.id === coffee.id
     })
     
-    setCoffeesCart(state => state.map((item) => {
-        if (orderAlreadyExist < 0) {
-          return coffee
-        } else {
+    if (!orderAlreadyExist) {
+      setCoffeesCart((state) => [...state, coffee])
+    
+    } else {
+      setCoffeesCart((state) => state.map((item) => {
+        if(item.id === coffee.id) {
           return {
             ...item,
             quantity: item.quantity + coffee.quantity
           }
+        } else {
+          return item
         }
-      }),
-    )
-    // setCoffeesCart([...coffeesCart, coffee])
+      }))
+    }
   }
-  console.log(coffeesCart)
 
 
   return (

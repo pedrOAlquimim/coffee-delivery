@@ -16,14 +16,14 @@ interface QuantityInputProps {
 export function QuantityInput({ paddingSize, quantity, onDrecrease, onIncrease }: QuantityInputProps) {
   return (
     <QuantityInputContainer paddingSize={paddingSize}>
-      <QuantityButtons>
-        <Minus onClick={onDrecrease} size={14} weight='bold' />
+      <QuantityButtons onClick={onDrecrease}>
+        <Minus size={14} weight='bold' />
       </QuantityButtons>
 
       <QuantityText>{quantity}</QuantityText>
 
-      <QuantityButtons>
-        <Plus onClick={onIncrease} size={14} weight='bold' />
+      <QuantityButtons onClick={onIncrease}>
+        <Plus size={14} weight='bold' />
       </QuantityButtons>
     </QuantityInputContainer>
   )
