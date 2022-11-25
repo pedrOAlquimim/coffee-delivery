@@ -1,6 +1,9 @@
+import { useContext } from 'react'
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { Trash } from 'phosphor-react'
 import { CoffeesProps } from '../../../Home/components/CoffeeCard'
+import { formatMoney } from '../../../../uses/formatPrice'
+import { CoffeeCartContext } from '../../../../context/CoffeeCartContext'
 import {
   CartCoffeeCardContainer,
   CartCoffeeCardOptions,
@@ -9,7 +12,6 @@ import {
   RemoveButton,
   CartCoffeeCardPrice
 } from './styles'
-import { formatMoney } from '../../../../uses/formatPrice'
 
 
 interface CartCoffeeCardProps {
@@ -17,6 +19,12 @@ interface CartCoffeeCardProps {
 }
 
 export function CartCoffeeCard({ coffee }: CartCoffeeCardProps) {
+  const { removeCoffeFromCart } = useContext(CoffeeCartContext)
+
+  function handleRemoveCoffeeFromCart() {
+    removeCoffeFromCart(coffee.id)
+  }
+
   const formattedPrice = formatMoney(coffee.price)
 
   return (
@@ -32,7 +40,7 @@ export function CartCoffeeCard({ coffee }: CartCoffeeCardProps) {
               paddingSize='small'
               quantity={coffee.quantity}
             />
-            <RemoveButton>
+            <RemoveButton onClick={handleRemoveCoffeeFromCart}>
               <span>
                 <Trash size={16} />
               </span>

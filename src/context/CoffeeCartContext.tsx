@@ -5,6 +5,7 @@ import { CoffeesProps } from "../pages/Home/components/CoffeeCard";
 interface CoffeeCartContextType {
   coffeesCart: CoffeesProps[]
   addCoffeesToCart: (coffee: CoffeesProps) => void
+  removeCoffeFromCart:(id: string) => void
 }
 
 interface CoffeeCartContextProviderProps {
@@ -38,11 +39,20 @@ export function CoffeeCartContextProvider({ children }: CoffeeCartContextProvide
     }
   }
 
+  function removeCoffeFromCart(id: string) {
+    const cartWithoutDeletedOne = coffeesCart.filter((item) => {
+      return item.id !== id
+    })
+
+    setCoffeesCart(cartWithoutDeletedOne)
+  }
+
 
   return (
     <CoffeeCartContext.Provider value={{
       coffeesCart,
       addCoffeesToCart,
+      removeCoffeFromCart
     }}>
       {children}
     </CoffeeCartContext.Provider>
