@@ -1,11 +1,12 @@
 import { createContext, ReactNode, useState } from "react";
-import { isHtmlElement } from "react-router-dom/dist/dom";
 import { CoffeesProps } from "../pages/Home/components/CoffeeCard";
 
 interface CoffeeCartContextType {
   coffeesCart: CoffeesProps[]
   addCoffeesToCart: (coffee: CoffeesProps) => void
   removeCoffeFromCart:(id: string) => void
+  increaseCoffeeQuantity:(id: string) => void
+  decreaseCoffeeQuantity:(id: string) => void
 }
 
 interface CoffeeCartContextProviderProps {
@@ -47,12 +48,41 @@ export function CoffeeCartContextProvider({ children }: CoffeeCartContextProvide
     setCoffeesCart(cartWithoutDeletedOne)
   }
 
+  function increaseCoffeeQuantity(id: string) {
+    setCoffeesCart((state) => state.map((item) => {
+      if(item.id === id) {
+        return {
+          ...item,
+          quantity: item.quantity + 1
+        }
+      } else {
+        return item
+      }
+    }))
+  }
+
+  function decreaseCoffeeQuantity(id: string) {
+    setCoffeesCart((state) => state.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          quantity: item.quantity - 1
+        }
+      } else {
+        return item
+      }
+    }))
+  }
+  console.log(coffeesCart)
+
 
   return (
     <CoffeeCartContext.Provider value={{
       coffeesCart,
       addCoffeesToCart,
-      removeCoffeFromCart
+      removeCoffeFromCart,
+      increaseCoffeeQuantity,
+      decreaseCoffeeQuantity,
     }}>
       {children}
     </CoffeeCartContext.Provider>

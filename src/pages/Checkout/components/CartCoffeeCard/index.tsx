@@ -19,10 +19,22 @@ interface CartCoffeeCardProps {
 }
 
 export function CartCoffeeCard({ coffee }: CartCoffeeCardProps) {
-  const { removeCoffeFromCart } = useContext(CoffeeCartContext)
+  const { 
+    removeCoffeFromCart,
+    increaseCoffeeQuantity,
+    decreaseCoffeeQuantity
+  } = useContext(CoffeeCartContext)
 
   function handleRemoveCoffeeFromCart() {
     removeCoffeFromCart(coffee.id)
+  }
+
+  function handleIncreaseCoffeeQuantity() {
+    increaseCoffeeQuantity(coffee.id)
+  }
+
+  function handleDecreaseCoffeeQuantity() {
+    decreaseCoffeeQuantity(coffee.id)
   }
 
   const formattedPrice = formatMoney(coffee.price)
@@ -39,6 +51,8 @@ export function CartCoffeeCard({ coffee }: CartCoffeeCardProps) {
             <QuantityInput
               paddingSize='small'
               quantity={coffee.quantity}
+              onIncrease={handleIncreaseCoffeeQuantity}
+              onDrecrease={handleDecreaseCoffeeQuantity}
             />
             <RemoveButton onClick={handleRemoveCoffeeFromCart}>
               <span>

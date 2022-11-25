@@ -8,15 +8,15 @@ import {
 
 interface QuantityInputProps {
   paddingSize: paddingSizeType
-  quantity?: number
-  onIncrease?: () => void
-  onDrecrease?: () => void
+  quantity: number
+  onIncrease: () => void
+  onDrecrease: () => void
 }
 
 export function QuantityInput({ paddingSize, quantity, onDrecrease, onIncrease }: QuantityInputProps) {
   return (
     <QuantityInputContainer paddingSize={paddingSize}>
-      <QuantityButtons onClick={onDrecrease}>
+      <QuantityButtons onClick={onDrecrease} disabled={quantity <= 1}>
         <Minus size={14} weight='bold' />
       </QuantityButtons>
 
