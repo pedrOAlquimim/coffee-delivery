@@ -3,6 +3,7 @@ import { CoffeesProps } from "../pages/Home/components/CoffeeCard";
 
 interface CoffeeCartContextType {
   coffeesCart: CoffeesProps[]
+  orderPrice: number
   addCoffeesToCart: (coffee: CoffeesProps) => void
   removeCoffeFromCart:(id: string) => void
   increaseCoffeeQuantity:(id: string) => void
@@ -17,6 +18,10 @@ export const CoffeeCartContext = createContext({} as CoffeeCartContextType)
 
 export function CoffeeCartContextProvider({ children }: CoffeeCartContextProviderProps) {
   const [coffeesCart, setCoffeesCart] = useState<CoffeesProps[]>([])
+
+  const orderPrice = coffeesCart.reduce((total, coffee) => {
+    return total + coffee.price * coffee.quantity
+  }, 0)
 
   function addCoffeesToCart(coffee: CoffeesProps) {
     const orderAlreadyExist = coffeesCart.find((coffeeCart) => {
@@ -83,6 +88,7 @@ export function CoffeeCartContextProvider({ children }: CoffeeCartContextProvide
       removeCoffeFromCart,
       increaseCoffeeQuantity,
       decreaseCoffeeQuantity,
+      orderPrice,
     }}>
       {children}
     </CoffeeCartContext.Provider>

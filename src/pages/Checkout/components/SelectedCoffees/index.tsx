@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { CoffeeCartContext } from '../../../../context/CoffeeCartContext'
+import { formatMoney } from '../../../../uses/formatPrice'
 import { CartCoffeeCard } from '../CartCoffeeCard'
 import {
   SelectedCoffeesContainer,
@@ -9,8 +10,15 @@ import {
 } from './styles'
 
 export function SelectedCoffees() {
-  const {coffeesCart} = useContext(CoffeeCartContext)
-  console.log(coffeesCart)
+  const { 
+    coffeesCart,
+    orderPrice,
+  } = useContext(CoffeeCartContext)
+
+  const totalOrderPrice = orderPrice + 3.50
+  const formattedOrderPrice = formatMoney(orderPrice)
+  const formattedTotalOrderPrice = formatMoney(totalOrderPrice)
+
   return (
     <SelectedCoffeesContainer>
       {coffeesCart.map((item) => (
@@ -21,7 +29,7 @@ export function SelectedCoffees() {
       <PriceContainer>
         <div>
           <p>Total de itens</p>
-          <p>R$ 29,70</p>
+          <p>R$ {formattedOrderPrice}</p>
         </div>
         <div>
           <p>Entrega</p>
@@ -29,7 +37,7 @@ export function SelectedCoffees() {
         </div>
         <div>
           <PriceTotal>Total</PriceTotal>
-          <PriceTotal>R$ 33,20</PriceTotal>
+          <PriceTotal>R$ {formattedTotalOrderPrice}</PriceTotal>
         </div>
       </PriceContainer>
 
