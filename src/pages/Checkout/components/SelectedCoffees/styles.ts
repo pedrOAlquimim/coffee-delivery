@@ -40,8 +40,21 @@ export const ConfirmOrderButton = styled.button`
   border-radius: 6px;
   background: ${(props) => props.theme.yellow};
   color: ${(props) => props.theme.white};
+  transition: all 0.5s;
 
   &:hover {
     background: ${(props) => props.theme["yellow-dark"]};
+  }
+`
+
+
+export const WithoutCoffeeDivContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.2rem;
+    padding: 11.863rem 0;
   }
 `

@@ -19,7 +19,6 @@ export const CartCoffeeCardOptions = styled.div`
 `
 
 export const CartCoffeeCardOptionsButtons = styled.div`
-
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -48,6 +47,7 @@ export const RemoveButton = styled.button`
   border-radius: 6px;
   cursor: pointer;
   background: ${(props) => props.theme["base-button"]};
+  transition: all 0.2s;
 
   &:hover {
     background: ${(props) => props.theme["base-hover"]};
