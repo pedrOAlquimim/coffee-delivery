@@ -8,8 +8,6 @@ import {
 } from './styles'
 
 export function AddressForm() {
-  const { register } = useForm()
-
 
   return (
     <FormContainer>
@@ -28,40 +26,40 @@ export function AddressForm() {
           placeholder='CEP'
           type='number'
           className='cep'
-          {...register('cep', {valueAsNumber: true})}
+          /* {...register('cep', {valueAsNumber: true})} */
         />
         <Input
           placeholder='Rua'
           type='string'
           className='street'
-          {...register('street')}
+          /* {...register('street')} */
         />
         <Input
           placeholder='Número'
           type='number'
-          {...register('number', { valueAsNumber: true })}
+          /* {...register('number', { valueAsNumber: true })} */
         />
         <Input
           placeholder='Complemento'
           type='string'
           className='complement'
           optional
-          {...register('complement')}
+          /* {...register('complement')} */
         />
         <Input
           placeholder='Bairro'
           type='string'
-          {...register('block')}
+          /* {...register('district')} */
         />
         <Input
           placeholder='Cidade'
           type='string'
-          {...register('city')}
+          /* {...register('city')} */
         />
         <Input
           placeholder='UF'
           type='string'
-          {...register('state')}
+          /* {...register('state')} */
         />
       </FormTag>
     </FormContainer>
