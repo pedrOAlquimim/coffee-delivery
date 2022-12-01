@@ -38,7 +38,7 @@ export const FormHeader = styled.header`
   }
 `
 
-export const FormTag = styled.form`
+export const FormTag = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 12.5rem 17.25rem 3.75rem;

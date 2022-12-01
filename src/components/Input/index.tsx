@@ -7,7 +7,7 @@ import {
 interface InputProps {
   optional?: boolean
   placeholder: string
-  type: string
+  type?: string
   className?: string
 }
 

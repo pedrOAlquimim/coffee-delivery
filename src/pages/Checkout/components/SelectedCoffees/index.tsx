@@ -24,40 +24,38 @@ export function SelectedCoffees() {
   return (
     <SelectedCoffeesContainer>
       
-      {cartQuantity <= 0
-      ?
+      {cartQuantity <= 0 ? (
         <>
           <WithoutCoffeeDivContainer>
             <p>nenhum café selecionado!</p>
           </WithoutCoffeeDivContainer>
         </>
-      :
-        (
-          <>
-            {coffeesCart.map((item) => (
-              <CartCoffeeCard key={item.id} coffee={item} />
-            ))}
+      ) : (
+        <>
+          {coffeesCart.map((item) => (
+            <CartCoffeeCard key={item.id} coffee={item} />
+          ))}
 
-            <PriceContainer>
-              <div>
-                <p>Total de itens</p>
-                <p>R$ {formattedOrderPrice}</p>
-              </div>
-              <div>
-                <p>Entrega</p>
-                <p>R$ 3,50</p>
-              </div>
-              <div>
-                <PriceTotal>Total</PriceTotal>
-                <PriceTotal>R$ {formattedTotalOrderPrice}</PriceTotal>
-              </div>
-            </PriceContainer>
+          <PriceContainer>
+            <div>
+              <p>Total de itens</p>
+              <p>R$ {formattedOrderPrice}</p>
+            </div>
+            <div>
+              <p>Entrega</p>
+              <p>R$ 3,50</p>
+            </div>
+            <div>
+              <PriceTotal>Total</PriceTotal>
+              <PriceTotal>R$ {formattedTotalOrderPrice}</PriceTotal>
+            </div>
+          </PriceContainer>
 
-            <ConfirmOrderButton>
-              Confirmar Pedido
-            </ConfirmOrderButton>
-          </>
-        )
+          <ConfirmOrderButton type="submit" >
+            Confirmar Pedido
+          </ConfirmOrderButton>
+        </>
+      )
       }
     </SelectedCoffeesContainer>
   )
