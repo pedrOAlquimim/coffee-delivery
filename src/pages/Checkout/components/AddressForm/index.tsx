@@ -7,8 +7,18 @@ import {
   FormTag
 } from './styles'
 
+interface ErrorsType {
+  errors: {
+    [key: string]: {
+      message: string
+    }
+  }
+}
+
 export function AddressForm() {
-  const { register } = useFormContext()
+  const { register, formState } = useFormContext()
+
+  const { errors } = formState as ErrorsType
 
   return (
     <FormContainer>
@@ -28,34 +38,41 @@ export function AddressForm() {
           type='number'
           className='cep'
           {...register('cep')}
+          error={errors.cep?.message}
         />
         <Input
           placeholder='Rua'
           className='street'
           {...register('street')}
+          error={errors.street?.message}
         />
         <Input
           placeholder='Número'
           type='number'
           {...register('number')}
+          error={errors.number?.message}
         />
         <Input
           placeholder='Complemento'
           className='complement'
           optional
           {...register('complement')}
+          error={errors.complement?.message}
         />
         <Input
           placeholder='Bairro'
           {...register('district')}
+          error={errors.district?.message}
         />
         <Input
           placeholder='Cidade'
           {...register('city')}
+          error={errors.city?.message}
         />
         <Input
           placeholder='UF'
           {...register('state')}
+          error={errors.state?.message}
         />
       </FormTag>
     </FormContainer>

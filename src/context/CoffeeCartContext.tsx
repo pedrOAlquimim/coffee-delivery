@@ -81,7 +81,6 @@ export function CoffeeCartContextProvider({ children }: CoffeeCartContextProvide
       }
     }))
   }
-  console.log(coffeesCart)
 
 
   return (

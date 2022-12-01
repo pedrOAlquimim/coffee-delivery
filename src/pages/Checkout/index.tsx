@@ -11,7 +11,7 @@ import {
 } from './styles'
 
 const addressValidationFormSchema = zod.object({
-  cep: zod.string().min(1, 'Informe o CEP').max(8),
+  cep: zod.string().min(1, 'Informe o CEP').max(9),
   street: zod.string().min(1, 'Informe a Rua'),
   number: zod.string().min(1, 'Informe o Número'),
   complement: zod.string().optional(),
@@ -29,7 +29,7 @@ export function Checkout() {
   const { handleSubmit } = addressValidationForm
 
   function handleFinishOrder(data: addressFormData) {
-    console.log(addressValidationForm)
+    console.log(data)
   }
 
   return (

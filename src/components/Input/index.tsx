@@ -1,24 +1,23 @@
+import { InputHTMLAttributes, forwardRef } from 'react'
 import {
   InputContainer,
   InputStyle,
   OptionalText
 } from './styles'
 
-interface InputProps {
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+  error?: string
   optional?: boolean
-  placeholder: string
-  type?: string
-  className?: string
 }
 
-export function Input({ optional, placeholder, type, className }: InputProps) {
+export const Input = forwardRef<HTMLInputElement, InputProps>( ({ optional, className, ...props }, ref) => {
   return (
     <InputContainer className={className}>
       <InputStyle 
-        placeholder={placeholder}
-        type={type}
+        {...props}
+        ref={ref}
       />
       {optional && <OptionalText>Optional</OptionalText>}
     </InputContainer>
   )
-}
+})
