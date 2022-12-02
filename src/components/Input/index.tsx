@@ -1,5 +1,6 @@
 import { InputHTMLAttributes, forwardRef } from 'react'
 import {
+  InputContainerError,
   InputContainer,
   InputStyle,
   OptionalText
@@ -10,14 +11,18 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   optional?: boolean
 }
 
-export const Input = forwardRef<HTMLInputElement, InputProps>( ({ optional, className, ...props }, ref) => {
+export const Input = forwardRef<HTMLInputElement, InputProps>(({ optional, className, error, ...props }, ref) => {
+
   return (
-    <InputContainer className={className}>
-      <InputStyle 
-        {...props}
-        ref={ref}
-      />
-      {optional && <OptionalText>Optional</OptionalText>}
-    </InputContainer>
+    <InputContainerError className={className}>
+      <InputContainer isError={!!error}>
+        <InputStyle 
+          {...props}
+          ref={ref}
+        />
+        {optional && <OptionalText>Optional</OptionalText>}
+      </InputContainer>
+      {error && <p>{error}</p>}
+    </InputContainerError>
   )
 })

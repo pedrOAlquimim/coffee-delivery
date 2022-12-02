@@ -1,6 +1,22 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
-export const InputContainer = styled.div`
+export const InputContainerError = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+
+  > p {
+    font-size: 0.75rem;
+    color: ${(props) => props.theme['base-error']};
+  }
+`
+
+interface InputContainerProps {
+  isError: boolean
+}
+
+export const InputContainer = styled.div<InputContainerProps>`
   width: 100%;
   height: 2.625rem;
   display: flex;
@@ -13,6 +29,13 @@ export const InputContainer = styled.div`
 
   &:focus-within {
     border-color: ${(props) => props.theme['yellow-dark']};
+  }
+
+  ${({ theme, isError }) =>
+    isError &&
+    css`
+      border-color: ${theme['base-error']};
+    `
   }
 `
 
