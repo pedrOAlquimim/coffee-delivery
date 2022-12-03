@@ -38,4 +38,10 @@ export const PaymentFormHeader = styled.header`
 export const PaymentFormButtons = styled.div`
   display: flex;
   gap: 0.75rem;
+  margin-bottom: 1rem;
+`
+
+export const PaymentFormButtonsErrorMessage = styled.p`
+  font-size: 0.75rem;
+  color: ${(props) => props.theme['base-error']};
 `

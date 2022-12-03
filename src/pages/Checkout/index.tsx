@@ -10,6 +10,12 @@ import {
   Title,
 } from './styles'
 
+enum PaymentMethods {
+  credit = "credit",
+  debit = "debit",
+  money = "money",
+}
+
 const addressValidationFormSchema = zod.object({
   cep: zod.string().min(1, 'Informe o CEP').max(9),
   street: zod.string().min(1, 'Informe a Rua'),
@@ -17,7 +23,12 @@ const addressValidationFormSchema = zod.object({
   complement: zod.string().optional(),
   district: zod.string().min(1, 'Informe o Bairro'),
   city: zod.string().min(1, 'Informe a Cidade'),
-  state: zod.string().min(1, 'Informe o Estado' ).max(2)
+  state: zod.string().min(1, 'Informe o Estado' ).max(2),
+  paymentMethod: zod.nativeEnum(PaymentMethods, {
+    errorMap: () => {
+      return{message: "Informe o método de pagamento"}
+    }
+  })
 })
 
 type addressFormData = zod.infer<typeof addressValidationFormSchema >
@@ -25,6 +36,9 @@ type addressFormData = zod.infer<typeof addressValidationFormSchema >
 export function Checkout() {
   const addressValidationForm = useForm<addressFormData>({
     resolver: zodResolver(addressValidationFormSchema),
+    defaultValues: {
+      paymentMethod: undefined
+    }
   })
   const { handleSubmit } = addressValidationForm
 
@@ -34,19 +48,19 @@ export function Checkout() {
 
   return (
     <FormProvider {...addressValidationForm}>
-        <FormCheckoutContainer onSubmit={handleSubmit(handleFinishOrder)}>
-          <Container>
-            <Title>Complete seu pedido</Title>
-            <AddressForm />
+      <FormCheckoutContainer onSubmit={handleSubmit(handleFinishOrder)}>
+        <Container>
+          <Title>Complete seu pedido</Title>
+          <AddressForm />
 
-            <PaymentForm />
-          </Container>
+          <PaymentForm />
+        </Container>
 
-          <Container>
-            <Title>Cafés selecionados</Title>
-            <SelectedCoffees />
-          </Container>
-        </FormCheckoutContainer>
+        <Container>
+          <Title>Cafés selecionados</Title>
+          <SelectedCoffees />
+        </Container>
+      </FormCheckoutContainer>
     </FormProvider>
   )
 }

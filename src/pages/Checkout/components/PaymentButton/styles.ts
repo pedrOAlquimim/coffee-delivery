@@ -1,23 +1,38 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const PaymentButtonContainer = styled.button`
+export const PaymentMethodContainer = styled.div`
   width: 100%;
+  
+  input  {
+    visibility: hidden;
+    appearance: none;
+  }
+
+  input:checked + label div {
+
+  ${(props) => css`
+    background: ${props.theme["purple-light"]};
+    outline: 1px solid ${props.theme.purple};
+
+    &:hover {
+      background: ${props.theme["purple-light"]};
+    }
+  `}
+  }
+`
+
+export const PaymentButtonContainer = styled.div`
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0.75rem;
   padding: 1.125rem 1rem;
-  align-items: center;
-  border: 0;
   border-radius: 6px;
   cursor: pointer;
   background: ${(props) => props.theme["base-button"]};
 
   &:hover {
     background: ${(props) => props.theme["base-hover"]};
-  }
-
-  &:focus {
-    outline: 1px solid ${(props) => props.theme.purple};
-    background: ${(props) => props.theme["purple-light"]};
   }
 `
 
