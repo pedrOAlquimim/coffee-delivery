@@ -28,3 +28,9 @@ export const Icon = styled.div<InfoIconStylesProps>`
   color: ${(props) => props.theme.background};
   background: ${(props) => props.theme[backgroundColorType[props.backgroundColor]]};
 `
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+`

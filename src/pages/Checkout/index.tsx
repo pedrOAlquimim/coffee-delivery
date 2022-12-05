@@ -9,6 +9,7 @@ import {
   Container,
   Title,
 } from './styles'
+import { useNavigate } from 'react-router-dom'
 
 enum PaymentMethods {
   credit = "credit",
@@ -31,7 +32,7 @@ const addressValidationFormSchema = zod.object({
   })
 })
 
-type addressFormData = zod.infer<typeof addressValidationFormSchema >
+export type addressFormData = zod.infer<typeof addressValidationFormSchema >
 
 export function Checkout() {
   const addressValidationForm = useForm<addressFormData>({
@@ -42,8 +43,12 @@ export function Checkout() {
   })
   const { handleSubmit } = addressValidationForm
 
+  const navigate = useNavigate()
+
   function handleFinishOrder(data: addressFormData) {
-    console.log(data)
+    navigate('/Success', {
+      state: data
+    })
   }
 
   return (

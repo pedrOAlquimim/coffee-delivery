@@ -1,17 +1,21 @@
 import { ReactNode } from 'react'
-import { BackgroundColorType, Icon, InfoIconContainer } from './styles'
+import { BackgroundColorType, Icon, InfoIconContainer, TextContainer } from './styles'
 
 interface InfoIconProps {
   icon: ReactNode
-  text: string | ReactNode
+  text: ReactNode
+  text2?: ReactNode
   backgroundColor: BackgroundColorType
 }
 
-export function InfoIcon({ icon, text, backgroundColor }: InfoIconProps) {
+export function InfoIcon({ icon, text, text2, backgroundColor }: InfoIconProps) {
   return (
     <InfoIconContainer>
       <Icon backgroundColor={backgroundColor}>{icon}</Icon>
-      <p>{text}</p>
+      <TextContainer>
+        <p>{text}</p>
+        <p>{text2}</p>
+      </TextContainer>
     </InfoIconContainer>
   )
 }
