@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
-export const CartCoffeeCardContainer = styled.div`
-  max-width: 28rem; 
+export const CartCoffeeCardContainer = styled.div` 
   display: flex;
   justify-content: space-between;
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid ${(props) => props.theme["base-button"]};
+
+  @media (max-width: 406px) {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 `
 
 export const CartCoffeeCardOptions = styled.div`

@@ -34,6 +34,10 @@ export const PaymentButtonContainer = styled.div`
   &:hover {
     background: ${(props) => props.theme["base-hover"]};
   }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `
 
 export const Icon = styled.span`

@@ -6,6 +6,10 @@ export const PaymentFormContainer = styled.div`
   padding: 2.5rem;
   border-radius: 6px;
   background: ${(props) => props.theme["base-card"]};
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `
 
 export const PaymentFormHeader = styled.header`
@@ -39,6 +43,10 @@ export const PaymentFormButtons = styled.div`
   display: flex;
   gap: 0.75rem;
   margin-bottom: 1rem;
+
+  @media (max-width: 624px) {
+    flex-direction: column;
+  }
 `
 
 export const PaymentFormButtonsErrorMessage = styled.p`

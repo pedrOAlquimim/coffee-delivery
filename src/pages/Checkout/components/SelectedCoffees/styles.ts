@@ -2,11 +2,19 @@ import styled from "styled-components";
 
 export const SelectedCoffeesContainer = styled.div`
   width: 100%;
-  max-width: 28rem;
   margin-top: 1rem;
   padding: 2.5rem;
   border-radius: 6px 44px 6px 44px;
   background-color: ${(props) => props.theme["base-card"]};
+
+  @media (max-width: 1279px) {
+    max-width: 40rem;
+  }
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
 `
 
 export const PriceContainer = styled.div`

@@ -6,10 +6,15 @@ export const HomeContainer = styled.div`
 
 export const IntroContainer = styled.section`
   display: flex;
-  justify-content: center;
   gap: 3.5rem;
   margin-top: 5.75rem;
   margin-bottom: 5.75rem;
+  
+  @media (max-width: 1170px) {
+    img {
+      display: none;
+    }
+  }
 `
 
 export const IntroDescriptionContainer = styled.div`
@@ -37,10 +42,14 @@ export const TitleContainer = styled.div`
 `
 
 export const InfoIntroItems = styled.div`
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 1.25rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const CoffeeTitle = styled.h2`
@@ -55,6 +64,11 @@ export const CoffeeTitle = styled.h2`
 export const CoffeeList = styled.div`
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+
+  @media (max-width: 1279px) {
+    align-items: center;
+  }
 `

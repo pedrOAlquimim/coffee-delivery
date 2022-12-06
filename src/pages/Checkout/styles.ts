@@ -1,14 +1,25 @@
 import styled from "styled-components";
 
 export const FormCheckoutContainer = styled.form`
-  width: 100%;
   display: flex;
   gap: 2rem;
+  margin-bottom: 9.813rem;
+  
+  @media (max-width: 1279px) {
+    flex-wrap: wrap;
+    gap: 0;
+  }
 `
 
 export const Container = styled.div`
   margin-top: 2.5rem;
   width: 100%;
+  
+  @media (max-width: 1279px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const Title = styled.h3`

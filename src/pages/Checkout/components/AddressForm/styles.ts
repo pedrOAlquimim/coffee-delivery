@@ -9,6 +9,10 @@ export const FormContainer = styled.div`
   border-radius: 6px;
 
   background: ${(props) => props.theme["base-card"]};
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `
 
 export const FormHeader = styled.header`
@@ -57,5 +61,14 @@ export const FormTag = styled.div`
   
   .complement {
     grid-column: span 2;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
+    .cep {
+      max-width: 100%;
+    }
   }
 `
