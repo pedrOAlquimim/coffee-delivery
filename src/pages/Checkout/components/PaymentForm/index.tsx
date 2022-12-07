@@ -1,12 +1,12 @@
-import { Bank, CreditCard, CurrencyDollar, Money } from "phosphor-react";
-import { useFormContext } from "react-hook-form";
-import { PaymentButton } from "../PaymentButton";
+import { Bank, CreditCard, CurrencyDollar, Money } from 'phosphor-react'
+import { useFormContext } from 'react-hook-form'
+import { PaymentButton } from '../PaymentButton'
 import {
   PaymentFormContainer,
   PaymentFormHeader,
   PaymentFormButtons,
   PaymentFormButtonsErrorMessage
-} from "./styles";
+} from './styles'
 
 export const paymentMethods = {
   credit: {

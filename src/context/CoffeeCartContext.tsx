@@ -1,5 +1,5 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
-import { CoffeesProps } from "../pages/Home/components/CoffeeCard";
+import { createContext, ReactNode, useEffect, useState } from 'react'
+import { CoffeesProps } from '../pages/Home/components/CoffeeCard'
 
 interface CoffeeCartContextType {
   coffeesCart: CoffeesProps[]

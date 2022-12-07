@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { AddressForm } from './components/AddressForm'
@@ -9,7 +10,6 @@ import {
   Container,
   Title,
 } from './styles'
-import { useNavigate } from 'react-router-dom'
 
 enum PaymentMethods {
   credit = "credit",

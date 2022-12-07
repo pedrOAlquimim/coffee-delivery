@@ -1,3 +1,6 @@
+import { useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { paymentMethods } from '../Checkout/components/PaymentForm'
 import { CurrencyDollar, Timer, MapPin } from 'phosphor-react'
 import { InfoIcon } from '../../components/InfoIcon'
 import { addressFormData } from '../Checkout'
@@ -7,9 +10,6 @@ import {
   ContentContainer,
   InfoIconsContainer
 } from './styles'
-import { useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import { paymentMethods } from '../Checkout/components/PaymentForm'
 
 interface LocationProps {
   state: addressFormData
