@@ -42,7 +42,7 @@ export function CartCoffeeCard({ coffee }: CartCoffeeCardProps) {
   return (
     <CartCoffeeCardContainer>
       <CartCoffeeCardOptions>
-        <img src={`/src/assets/coffeesImages/${coffee.photo}`} />
+        <img src={`/coffeesImages/${coffee.photo}`} />
 
         <CartCoffeeCardOptionsButtons>
           <h3>{coffee.name}</h3>
