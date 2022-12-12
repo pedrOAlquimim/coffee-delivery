@@ -23,6 +23,12 @@ export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 999px) {
+    img {
+      display: none;
+    }
+  }
 `
 
 export const InfoIconsContainer = styled.div`
