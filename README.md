@@ -4,7 +4,7 @@
 
 ### What is the project?
 
-This is a project made entirely in React of an Ecommerce Coffee sales site to improve concets such as Context API, Router, form validation through React-hook-form and Zod and Styled Components for styling
+2º Challenge of Ignite Rocketseat. This is a project made entirely in React of an Ecommerce Coffee sales site to improve concets such as Context API, Router, form validation through React-hook-form and Zod and Styled Components for styling
 
 You can see the project: [Coffee Delivery](https://coffee-delivery-azure.vercel.app/)
 
@@ -23,7 +23,7 @@ You can see the project: [Coffee Delivery](https://coffee-delivery-azure.vercel.
 
 ### O que é o projeto?
 
-Esse é um projeto feito totalmente em React de um site Ecommerce de vendas de café para aprimorar conceitos como Context API, Router, validação de formulário por meio do React-hook-form e do Zod e Styled Components para estilização
+2º Desafio do Ignite @Rocketseat. Esse é um projeto feito totalmente em React de um site Ecommerce de vendas de café para aprimorar conceitos como Context API, Router, validação de formulário por meio do React-hook-form e do Zod e Styled Components para estilização
 
 Voce pode conferir o projeto: [Coffee Delivery](https://coffee-delivery-azure.vercel.app/)
 
