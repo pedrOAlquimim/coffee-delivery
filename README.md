@@ -4,7 +4,7 @@
 
 ### What is the project?
 
-2º Challenge of Ignite Rocketseat. This is a project made entirely in React of an Ecommerce Coffee sales site to improve concets such as Context API, Router, form validation through React-hook-form and Zod and Styled Components for styling
+2º Challenge of Ignite @Rocketseat. This is a project made entirely in React of an Ecommerce Coffee sales site to improve concets such as Context API, Router, form validation through React-hook-form and Zod and Styled Components for styling
 
 You can see the project: [Coffee Delivery](https://coffee-delivery-azure.vercel.app/)
 
@@ -36,3 +36,11 @@ Voce pode conferir o projeto: [Coffee Delivery](https://coffee-delivery-azure.ve
 - React-hook-form (@hookform/resolvers)
 - Zod
 - uuid
+
+### Project Images
+
+<div>
+  <img src="/src/assets/project/image0.png" width="580px" styles='margin-right: 30px;' />
+  <img src="/src/assets/project/image1.png" width="580px" />
+  <img src="/src/assets/project/image2.png" />
+</div>
